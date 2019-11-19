@@ -1,16 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+﻿using UnityEngine;
 
 public class Storage : MonoBehaviour{
-
-    [SerializeField] TextMeshProUGUI woodText;
-    [SerializeField] TextMeshProUGUI ironText;
-    [SerializeField] TextMeshProUGUI foodText;
-    [SerializeField] TextMeshProUGUI toolText;
-    [SerializeField] TextMeshProUGUI goldText;
 
     int woodResource = 0;
     int ïronResource = 0;
@@ -18,15 +8,54 @@ public class Storage : MonoBehaviour{
     int toolResource = 0;
     int goldResource = 0;
 
-    void Start() {
-        
+    public void UpdateWood(int amt)
+    {
+        woodResource += amt;
     }
 
-    void Update() {
-        woodText.text = woodResource.ToString();
-        woodText.text = woodResource.ToString();
-        woodText.text = woodResource.ToString();
-        woodText.text = woodResource.ToString();
-        woodText.text = woodResource.ToString();
+    public void UpdateIron(int amt)
+    {
+        ïronResource += amt;
     }
+
+    public void UpdateFood(int amt)
+    {
+        foodResource += amt;
+    }
+
+    public void UpdateTools(int amt)
+    {
+        toolResource += amt;
+    }
+
+    public void UpdateGold(int amt)
+    {
+        goldResource += amt;
+    }
+
+    public int GetWood()
+    {
+        return woodResource;
+    }
+
+    public int GetIron()
+    {
+        return ïronResource;
+    }
+
+    public int GetFood()
+    {
+        return foodResource;
+    }
+
+    public int GetTools()
+    {
+        return toolResource;
+    }
+
+    public int GetGold()
+    {
+        return goldResource;
+    }
+
 }
